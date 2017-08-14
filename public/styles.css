@@ -1,0 +1,12 @@
+.runner-card{
+  border-style: dotted;
+display: flex;
+flex-wrap: wrap;
+width: 10rem;
+}
+
+.container{
+  display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}

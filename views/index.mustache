@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>Runners</title>
+  </head>
+  <body>
+    <header>
+      <h1>Runners in Race</h1>
+    </header>
+    <div class="navigation">
+      <a href="/index">Race Runners</a>
+      <a href="/add_runner">Add Runner</a>
+    </div>
+    <div class="container">
+      {{#runners}}
+        <div class="runner-card">
+          <h2>{{division}} </h2>
+          <h2>{{sponser}}</h2>
+          <a href='views/singleRunner.mustache'> <h2>{{name}}</h2></a>
+        </div>
+      {{/runners}}
+  </body>
+</html>
