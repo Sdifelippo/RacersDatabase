@@ -8,8 +8,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "db": "^1.0.6",
     "express": "^4.15.4",
-    "pg": "^7.1.2"
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.5",
+    "mysql": "^2.14.1",
+    "pg": "^7.1.2",
+    "pg-promise": "^6.3.8"
   },
   "devDependencies": {},
   "description": ""

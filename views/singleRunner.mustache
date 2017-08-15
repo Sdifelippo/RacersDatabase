@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  {{> head}}
-  <body>
-    <header>
-      <h1>SEN. {{runner.division}} {{runner.sponser}} {{runner.name}}</h1>
-    </header>
-    <div class="navigation">
-      <a href="/">Runner Profile</a>
-      <a href="/add_runner">Add Runner</a>
-    </div>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>Runner Profile</title>
+</head>
+<body>
+  <header>
+    <h1>Runners Profile</h1>
+    <a href="/">Home</a>
+    {{#runners}}
+    <h1>{{name}}</h1>
+    <p>Division: {{division}}</p>
+    <p>Sponsor: {{sponsor}}</p>
+    {{/runners}}
+
+  </body>
 </html>

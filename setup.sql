@@ -35,6 +35,8 @@ CREATE TABLE result(
 );
 
 INSERT INTO runner ( division, sponser, name)
-VALUES ('m30', 'The Iron Yard', 'Steven Difelippo' ),
-       ('f30', 'The Iron Yard', 'Angelica Rodriguez' ),
-       ('m30', 'The Iron Yard', 'Rudy Gonzalez' );
+VALUES ('m30', 'Google', 'Steven Difelippo' ),
+       ('f30', 'ADP', 'Angelica Rodriguez' ),
+       ('a30', 'Dogs', 'Kronos Monster' ),
+       ('m30', 'Nike', 'Rudy Gonzalez' ),
+       ('f30', 'Nike', 'Katherine Gonzalez' );
