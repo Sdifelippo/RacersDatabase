@@ -6,10 +6,10 @@
   </head>
   <body>
     <header>Add A Runner</header>
-    <form action="/add_runner" method="post">
+    <form action="/addRunner" method="post">
       <div class="fields" id="fields">
         <span>New Runner: </span>
-        <input type="text" name="bib_id" value="{{newId}}" readonly>
+        BibId: <input type="text" placeholder="auto"name="bib_id" value="{{newId}}" readonly>
         <input type="text" placeholder="Runner's Full Name" name="name">
         <input type="text" placeholder="Sponsor" name="sponsor">
         <input type="text" placeholder="Division" name="division">

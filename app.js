@@ -29,14 +29,14 @@ app.get('/', (req, res, next) => {
   });
 });
 
-app.get('/addRunnner', (req, res) => {
-  res.render('add')
+app.get('/addRunner', (req, res) => {
+  res.render('addRunner')
 });
 
-app.post('/addRunnner', (req, res, next) => {
-  let addRunnner = `INSERT INTO runner(division,sponser,name)
+app.post('/addRunner', (req, res, next) => {
+  let addRunner = `INSERT INTO runner(division,sponsor,name)
   VALUES( '${req.body.division}',
-          '${req.body.sponser}',
+          '${req.body.sponsor}',
           '${req.body.name}'
         )`;
   db.query(addRunner, (err) => {
@@ -53,7 +53,7 @@ app.get('/:id', (req, res, next) => {
     if (err) {
       return next(err)
     }
-    res.render('singleRunner', {runner:results.rows})
+    res.render('singleRunner', {runners:results.rows})
   });
 });
 app.listen(3000, () => {

@@ -12,15 +12,14 @@
     <h1>Runners in Race</h1>
   </header>
   <div class="navigation">
-    <a href="/index">Race Runners</a>
-    <a href="/add_runner">Add Runner</a>
+    <a href="/addRunner">Add Runner</a>
   </div>
   <div class="container">
     {{#runners}}
       <div class="runner-card">
         <h2>Division: {{division}} </h2>
-        <h2>Sponser: {{sponser}}</h2>
-        <a href='views/singleRunner.mustache'>
+        <h2>Sponsor: {{sponsor}}</h2>
+        <a href='{{bib_id}}'>
           <h2>Runners: {{name}}</h2></a>
       </div>
     {{/runners}}

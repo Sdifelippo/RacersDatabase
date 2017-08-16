@@ -6,7 +6,7 @@ CREATE DATABASE racedb;
 CREATE TABLE runner (
   bib_id  SERIAL PRIMARY KEY,
   division VARCHAR(100),
-  sponser VARCHAR(100),
+  sponsor VARCHAR(100),
   name VARCHAR(100)
 );
 
@@ -34,7 +34,7 @@ CREATE TABLE result(
   PRIMARY KEY (race_id, bib_id)
 );
 
-INSERT INTO runner ( division, sponser, name)
+INSERT INTO runner ( division, sponsor, name)
 VALUES ('m30', 'Google', 'Steven Difelippo' ),
        ('f30', 'ADP', 'Angelica Rodriguez' ),
        ('a30', 'Dogs', 'Kronos Monster' ),
