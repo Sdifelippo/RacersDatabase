@@ -1,3 +1,4 @@
+// dependency requirement for libraries
 const express = require('express');
 const db = require('./db');
 const mustacheExpress = require('mustache-express');
