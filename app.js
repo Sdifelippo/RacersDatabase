@@ -17,36 +17,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-
+//routes to localhost/home and displays all runners in db
 app.get('/', (req, res, next) => {
   db.query('SELECT * FROM runner', (err, results) => {
     if (err) {
       return next(err)
     }
-    res.render('index', {
+    res.render('home', {
       runners: results.rows
     });
   });
 });
-
-app.get('/addRunner', (req, res) => {
-  res.render('addRunner')
-});
-
-app.post('/addRunner', (req, res, next) => {
-  let addRunner = `INSERT INTO runner(division,sponsor,name)
-  VALUES( '${req.body.division}',
-          '${req.body.sponsor}',
-          '${req.body.name}'
-        )`;
-  db.query(addRunner, (err) => {
-    if (err) {
-      return next(err)
-    }
-    res.redirect('/')
-  });
-});
-
+//get id of single runner which is then rendered as a page
 app.get('/:id', (req, res, next) => {
   const id = req.params.id
   db.query(`SELECT * FROM runner WHERE bib_id = ${id}`, (err, results) => {
